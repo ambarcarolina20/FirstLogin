@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Ingreso al sistema
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" >
+  <ion-card class="ion-padding">
+    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <ion-card-header>
+      <ion-card-title>Sistema de registro de movilidad laboral
+      </ion-card-title>
+    </ion-card-header>
+    <form>
+      <ion-input 
+        label="Email"
+        type = "email"
+        label-placement="floating" 
+        fill="outline" 
+        placeholder="Ingrese su email">
+      </ion-input>
+      <br>
+      <ion-input 
+        label="Contraseña"
+        type = "password"
+        label-placement="floating" 
+        fill="outline" 
+        placeholder="Ingrese su contraseña">
+      </ion-input>
+      <br>
+      <ion-button type="submit" [disabled]="!loginForm.valid" expand="block">Ingresar</ion-button> 
+      <br>
+      <ion-button (click)="toRegister()" expand="block">Registrase</ion-button>
+      <br>
+      <ion-button expand="block">¿Olvido su contraseña?</ion-button>
+    </form>
+    <ion-card-content>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>

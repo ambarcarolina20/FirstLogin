@@ -12,12 +12,13 @@
       <ion-card-title>Sistema de registro de movilidad laboral
       </ion-card-title>
     </ion-card-header>
-    <form>
+    <form [formGroup]="loginForm" (submit)="submitLoginForm()">
       <ion-input 
         label="Email"
         type = "email"
         label-placement="floating" 
         fill="outline" 
+        formControlName="email"
         placeholder="Ingrese su email">
       </ion-input>
       <br>
@@ -26,6 +27,7 @@
         type = "password"
         label-placement="floating" 
         fill="outline" 
+        formControlName="password"
         placeholder="Ingrese su contraseña">
       </ion-input>
       <br>
